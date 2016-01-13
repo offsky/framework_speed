@@ -9,6 +9,7 @@ span.cell { cursor:pointer; display:inline-block; border: 1px solid black; paddi
 <div id="loading">{{loading}}</div>
 <div ng-controller="testCtl">
 
+<button ng-click="start()">start</button>
 <div ng-repeat="row in items track by $index" ng-include src="'row.html'"></div>
 
 </div>

@@ -7,6 +7,7 @@ span.cell { cursor:pointer; display:inline-block; border: 1px solid black; paddi
 </style>
 </head><body>
 <div id="loading">Loading</div>
+<button id="start">start</button>
 <div id="data"></div>
 
 <script>
@@ -14,37 +15,39 @@ span.cell { cursor:pointer; display:inline-block; border: 1px solid black; paddi
 $(document).ready(function() {
  	$('#loading').html("ready");
  	
- 	var data = [];
- 	var html="";
-	for(var i=0;i<5000;i++) {
-		data[i] = {"name":"Item"+i,"text":"This is "+i+" comment"};
-		html = '<div>';
-		html += '<span class="cell" data-num="1">'+data[i]['name']+' = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">'+data[i]['text']+' = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">a = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">b = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">c = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">d = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">e = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">f = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">g = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">h = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">i = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">j = <i>1</i></span>';
-		html += '<span class="cell" data-num="1">k = <i>1</i></span>';
-		html += '</div>';
-		$('#data').append(html);
+	function start() {
+		var data = [];
+	 	var html="";
+		for(var i=0;i<5000;i++) {
+			data[i] = {"name":"Item"+i,"text":"This is "+i+" comment"};
+			html = '<div>';
+			html += '<span class="cell" data-num="1">'+data[i]['name']+' = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">'+data[i]['text']+' = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">a = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">b = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">c = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">d = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">e = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">f = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">g = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">h = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">i = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">j = <i>1</i></span>';
+			html += '<span class="cell" data-num="1">k = <i>1</i></span>';
+			html += '</div>';
+			$('#data').append(html);
+		}
+
+		$('.cell').on("click",function(e) {
+			var cell = $(e.target);
+			var data = cell.data("num");
+			data++;
+			cell.data("num",data);
+			cell.find("i").html(data);
+		});
 	}
 
-
-
-	$('.cell').on("click",function(e) {
-		var cell = $(e.target);
-		var data = cell.data("num");
-		data++;
-		cell.data("num",data);
-		cell.find("i").html(data);
-	})
+	$('#start').click(start);
 
 });
 

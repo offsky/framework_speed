@@ -13,7 +13,7 @@ angular.module('test').controller('testCtl', ['$scope', '$rootScope', function($
 	$rootScope.loading = "Loading";
 	
 	//Adds num more rows
-	$scope.add = function() {
+	$scope.start = function() {
 		for(var i = 0;i<5000;i++) {
 			var cols = [1,1,1,1,1,1,1,1,1,1,1,1,1];
 			$scope.items.push({"name":"Item"+i,"text":"This is "+i+" comment","c":cols});
@@ -21,8 +21,6 @@ angular.module('test').controller('testCtl', ['$scope', '$rootScope', function($
 	}
 
 	$rootScope.loading = "Ready";
-
-	$scope.add();
 
 	$scope.click = function(i,index) {
 		$scope.items[index].c[i]++;
