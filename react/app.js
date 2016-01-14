@@ -9,19 +9,19 @@ var Row = React.createClass({
     this.setState({row:this.state.row});
   },
   render: function() {
-    var s0 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,0),key:"c0"},this.state.row.name+" = "+this.state.row.c[0]);
-    var s1 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,1),key:"c1"},this.state.row.text+" = "+this.state.row.c[1]);
-    var s2 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,2),key:"c2"},"a = "+this.state.row.c[2]);
-    var s3 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,3),key:"c3"},"a = "+this.state.row.c[3]);
-    var s4 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,4),key:"c4"},"a = "+this.state.row.c[4]);
-    var s5 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,5),key:"c5"},"a = "+this.state.row.c[5]);
-    var s6 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,6),key:"c6"},"a = "+this.state.row.c[6]);
-    var s7 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,7),key:"c7"},"a = "+this.state.row.c[7]);
-    var s8 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,8),key:"c8"},"a = "+this.state.row.c[8]);
-    var s9 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,9),key:"c9"},"a = "+this.state.row.c[9]);
-    var s10 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,10),key:"c10"},"a = "+this.state.row.c[10]);
-    var s11 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,11),key:"c11"},"a = "+this.state.row.c[11]);
-    var s12 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,12),key:"c12"},"a = "+this.state.row.c[12]);
+    var s0 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,0),key:"c0"},[this.state.row.name+" = ",React.createElement('i',null,this.state.row.c[0])]);
+    var s1 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,1),key:"c1"},[this.state.row.text+" = ",React.createElement('i',null,this.state.row.c[1])]);
+    var s2 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,2),key:"c2"},["a = ",React.createElement('i',null,this.state.row.c[2])]);
+    var s3 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,3),key:"c3"},["b = ",React.createElement('i',null,this.state.row.c[3])]);
+    var s4 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,4),key:"c4"},["c = ",React.createElement('i',null,this.state.row.c[4])]);
+    var s5 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,5),key:"c5"},["d = ",React.createElement('i',null,this.state.row.c[5])]);
+    var s6 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,6),key:"c6"},["e = ",React.createElement('i',null,this.state.row.c[6])]);
+    var s7 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,7),key:"c7"},["f = ",React.createElement('i',null,this.state.row.c[7])]);
+    var s8 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,8),key:"c8"},["g = ",React.createElement('i',null,this.state.row.c[8])]);
+    var s9 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,9),key:"c9"},["h = ",React.createElement('i',null,this.state.row.c[9])]);
+    var s10 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,10),key:"c10"},["i = ",React.createElement('i',null,this.state.row.c[10])]);
+    var s11 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,11),key:"c11"},["j = ",React.createElement('i',null,this.state.row.c[11])]);
+    var s12 = React.createElement('span',{className:"cell",onClick:this.clicked.bind(this,12),key:"c12"},["k = ",React.createElement('i',null,this.state.row.c[12])]);
 
     var div = React.createElement('div', null, [s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12]);
     return div;
